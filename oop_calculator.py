@@ -46,14 +46,14 @@ def get_numbers():
 
 def main():
     while True:
-        print("\n=== SIMPLE CALCULATOR ===")
+        print(bold+"\n===CALCULATOR NG MAANGAS ===")
         print("")
         print("1. Addition")
         print("2. Subtraction")
         print("3. Multiplication")
-        print("4. Division")
+        print("4. Division"+end)
         print("")
-        choice = input("Choose operation (1-4): ")
+        choice = input(bold+"Choose operation (1-4): "+end)
 
         if choice not in ['1', '2', '3', '4']:
             print(bold+red+"Invalid operation! Please try again."+end)
@@ -72,14 +72,15 @@ def main():
                 operation = Division(firstnumber,secondnumber)
 
             result = operation.calculate()
-            print(f"\nThe total is = {result}")
+            print(bold+f"\nUh ah, ang total ay = {result}")
 
         except ZeroDivisionError as error:
             print(f"Error: {error}")
 
         again = input("\nDo you want to try again? (yes/no): ").lower()
         if again != 'yes':
-            print("Thank you!")
+            print("")
+            print(bold+green+"Thank you!"+end)
             break
 
 
