@@ -27,3 +27,13 @@ class Division(Calculator):
         if self.secondnum == 0:
             raise ZeroDivisionError("Cannot divide by zero!")
         return self.firstnum / self.secondnum
+
+
+def get_numbers():
+    while True:
+        try:
+            firstnumber = float(input("Enter first number: "))
+            secondnumber = float(input("Enter second number: "))
+            return firstnumber,secondnumber
+        except ValueError:
+            print("Invalid input! Please enter numbers only.\n")
