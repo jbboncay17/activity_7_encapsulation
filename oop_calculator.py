@@ -1,3 +1,8 @@
+bold="\033[1m"
+end="\033[0m"
+green="\033[32m"
+red="\033[31m"
+
 class Calculator:
     def __init__(self, firstnum, secondnum):
         self.firstnum = firstnum
@@ -32,11 +37,11 @@ class Division(Calculator):
 def get_numbers():
     while True:
         try:
-            firstnumber = float(input("Enter first number: "))
-            secondnumber = float(input("Enter second number: "))
+            firstnumber = float(input(bold+green+"Enter first number: "+end))
+            secondnumber = float(input(bold+green+"Enter second number: "+end))
             return firstnumber,secondnumber
         except ValueError:
-            print("Invalid input! Please enter numbers only.\n")
+            print(bold+red+"Invalid input! Please enter numbers only.\n"+end)
 
 
 def main():
@@ -46,7 +51,7 @@ def main():
         print("2. Subtraction")
         print("3. Multiplication")
         print("4. Division")
-
+        print("")
         choice = input("Choose operation (1-4): ")
 
         if choice not in ['1', '2', '3', '4']:
@@ -66,7 +71,7 @@ def main():
                 operation = Division(firstnumber,secondnumber)
 
             result = operation.calculate()
-            print(f"\nResult: {result}")
+            print(f"\nThe total is = {result}")
 
         except ZeroDivisionError as error:
             print(f"Error: {error}")
