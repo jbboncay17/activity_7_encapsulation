@@ -54,3 +54,16 @@ def main():
             continue
 
         firstnumber, secondnumber = get_numbers()
+
+        try:
+            if choice == '1':
+                operation = Addition(firstnumber,secondnumber)
+            elif choice == '2':
+                operation = Subtraction(firstnumber,secondnumber)
+            elif choice == '3':
+                operation = Multiplication(firstnumber,secondnumber)
+            elif choice == '4':
+                operation = Division(firstnumber,secondnumber)
+
+            result = operation.calculate()
+            print(f"\nResult: {result}")
