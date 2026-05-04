@@ -37,3 +37,18 @@ def get_numbers():
             return firstnumber,secondnumber
         except ValueError:
             print("Invalid input! Please enter numbers only.\n")
+            
+
+def main():
+    while True:
+        print("\n=== SIMPLE CALCULATOR ===")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
+
+        choice = input("Choose operation (1-4): ")
+
+        if choice not in ['1', '2', '3', '4']:
+            print("Invalid choice! Try again.")
+            continue
