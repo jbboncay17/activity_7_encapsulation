@@ -67,3 +67,15 @@ def main():
 
             result = operation.calculate()
             print(f"\nResult: {result}")
+
+        except ZeroDivisionError as error:
+            print(f"Error: {error}")
+
+        again = input("\nDo you want to try again? (yes/no): ").lower()
+        if again != 'yes':
+            print("Thank you!")
+            break
+
+
+if __name__ == "__main__":
+    main()
