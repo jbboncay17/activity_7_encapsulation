@@ -2,6 +2,7 @@ bold="\033[1m"
 end="\033[0m"
 green="\033[32m"
 red="\033[31m"
+black="\033[30m"
 
 class Calculator:
     def __init__(self, firstnum, secondnum):
@@ -80,7 +81,7 @@ def main():
         again = input("\nDo you want to try again? (yes/no): ").lower()
         if again != 'yes':
             print("")
-            print(bold+green+"Thank you!"+end)
+            print(bold+green+"Maraming Salamat! Isa kang maangas na tao"+end)
             break
 
 
