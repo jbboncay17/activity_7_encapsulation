@@ -37,7 +37,7 @@ def get_numbers():
             return firstnumber,secondnumber
         except ValueError:
             print("Invalid input! Please enter numbers only.\n")
-            
+
 
 def main():
     while True:
@@ -52,3 +52,5 @@ def main():
         if choice not in ['1', '2', '3', '4']:
             print("Invalid choice! Try again.")
             continue
+
+        firstnumber, secondnumber = get_numbers()
