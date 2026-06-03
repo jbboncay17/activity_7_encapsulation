@@ -6,20 +6,21 @@ blue="\033[34m"
 yellow="\033[33m"
 
 from car_class import Car
-
+print(bold+green+"************CAR CLASS TEST************"+end)
+print("")
 def test_car():
-    car = Car(2023,Toyota):
+    car = Car(2023,"Toyota")
     return car
 
 if __name__ == "__main__":
     car = test_car()
 
-    print("Accelerating:")
+    print(bold+blue+"************ACCELERATING************:"+end)
     for i in range(5):
         car.accelerate()
-        print("Current Speed:", car.get_speed())
-
-    print("\nBraking:")
+        print(bold+red+"Current Speed:"+end, car.get_speed())
+    print("")
+    print(bold+yellow+"************BRAKING************"+end)
     for i in range(5):
         car.brake()
-        print("Current Speed:", car.get_speed())
+        print(bold+red+"Current Speed:"+end, car.get_speed())
