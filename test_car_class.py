@@ -1,3 +1,10 @@
+bold="\033[1m"
+red="\033[31m"
+end="\033[0m"
+green="\033[32m"
+blue="\033[34m"
+yellow="\033[33m"
+
 from car_class import Car
 
 def test_car():
