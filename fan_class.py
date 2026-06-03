@@ -8,7 +8,7 @@ class Fan:
         self.__radius=radius
         self.__color=color
         self.__on=on
-        
+
     def set_speed(self,speed):
         self.__speed=speed
 
